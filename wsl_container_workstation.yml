@@ -10,7 +10,7 @@
   hosts: localhost
   become: yes
   vars:
-    user: root
+    user: "{{ lookup('env', 'USER') }}"
 
 
   tasks:
